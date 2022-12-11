@@ -1,0 +1,351 @@
+{
+	"low_pass": {
+		"cutoff_frequency": {
+			"value": "8000",
+			"uncert": "3600",
+			"unit": "hertz"			 
+		},
+		"units": {
+			"module": "millivolts",	
+			"phase_delta": "microseconds",
+			"frequency": "hertz"
+		},
+		"samples": {
+			"module": [
+				{
+					"frequency": "100",
+					"value": "800",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "300",
+					"value": "800",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "500",
+					"value": "800",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "1000",
+					"value": "800",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "3000",
+					"value": "800",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "5000",
+					"value": "800",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "10000",
+					"value": "680",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "30000",
+					"value": "400",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "50000",
+					"value": "240",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "100000",
+					"value": "130",
+					"uncert": "8",
+					"avg_on": "1"
+				},
+				{
+					"frequency": "300000",
+					"value": "44",
+					"uncert": "4",
+					"avg_on": "1"
+				},
+				{
+					"frequency": "500000",
+					"value": "28",
+					"uncert": "4",
+					"avg_on": "1"
+				},
+				{
+					"frequency": "1000000",
+					"value": "12",
+					"uncert": "4",
+					"avg_on": "1"
+				}	
+			],
+			"phase_delta": [
+				{
+					"frequency": "100",
+					"value": "0",
+					"uncert": "40",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "300",
+					"value": "0",
+					"uncert": "40",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "500",
+					"value": "0",
+					"uncert": "40",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "1000",
+					"value": "10",
+					"uncert": "20",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "3000",
+					"value": "8",
+					"uncert": "8",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "5000",
+					"value": "10",
+					"uncert": "2",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "10000",
+					"value": "8.2",
+					"uncert": "0.4",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "30000",
+					"value": "5.8",
+					"uncert": "0.4",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "50000",
+					"value": "4",
+					"uncert": "0.2",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "100000",
+					"value": "2.2",
+					"uncert": "0.2",
+					"avg_on": "1"
+				},
+				{
+					"frequency": "300000",
+					"value": "0.88",
+					"uncert": "0.04",
+					"avg_on": "1"
+				},
+				{
+					"frequency": "500000",
+					"value": "0.52",
+					"uncert": "0.04",
+					"avg_on": "1"
+				},
+				{
+					"frequency": "1000000",
+					"value": "0.25",
+					"uncert": "0.04",
+					"avg_on": "1"
+				}	
+			]
+		}
+	},
+	"high_pass": {
+		"cutoff_frequency": {
+			"value": "16000",
+			"uncert": "4000",
+			"unit": "hertz"			 
+		},
+		"units": {
+			"module": "millivolts",	
+			"phase_delta": "microseconds",
+			"frequency": "hertz"
+		},
+		"samples": {
+			"module": [
+				{
+					"frequency": "100",
+					"value": "5",
+					"uncert": "0.5",	
+					"avg_on": "1"
+				},
+				{
+					"frequency": "300",
+					"value": "16",
+					"uncert": "3",
+					"avg_on": "1"
+				},
+				{
+					"frequency": "500",
+					"value": "16",
+					"uncert": "8",	
+					"avg_on": "1"
+				},
+				{
+					"frequency": "1000",
+					"value": "80",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "3000",
+					"value": "160",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "5000",
+					"value": "240",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "10000",
+					"value": "400",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "30000",
+					"value": "720",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "50000",
+					"value": "760",
+					"uncert": "80",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "100000",
+					"value": "760",
+					"uncert": "80",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "300000",
+					"value": "800",
+					"uncert": "80",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "500000",
+					"value": "800",
+					"uncert": "80",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "1000000",
+					"value": "800",
+					"uncert": "80",
+					"avg_on": "0"
+				}	
+			],
+			"phase_delta": [
+				{
+					"frequency": "100",
+					"value": "-2600",
+					"uncert": "500",
+					"avg_on": "1"
+				},
+				{
+					"frequency": "300",
+					"value": "-800",
+					"uncert": "100",
+					"avg_on": "1"
+				},
+				{
+					"frequency": "500",
+					"value": "-250",
+					"uncert": "100",	
+					"avg_on": "1"
+				},
+				{
+					"frequency": "1000",
+					"value": "-250",
+					"uncert": "25",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "3000",
+					"value": "-80",
+					"uncert": "4",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "5000",
+					"value": "-40",
+					"uncert": "4",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "10000",
+					"value": "-16",
+					"uncert": "1",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "30000",
+					"value": "-2.5",
+					"uncert": "0.2",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "50000",
+					"value": "-1",
+					"uncert": "0.2",	
+					"avg_on": "0"
+				},
+				{
+					"frequency": "100000",
+					"value": "-0.25",
+					"uncert": "0.1",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "300000",
+					"value": "-0.04",
+					"uncert": "0.04",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "500000",
+					"value": "0",
+					"uncert": "0.02",
+					"avg_on": "0"
+				},
+				{
+					"frequency": "1000000",
+					"value": "0",
+					"uncert": "0.02",
+					"avg_on": "0"
+				}	
+			]
+		}
+	}
+ }
+

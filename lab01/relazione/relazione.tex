@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\usepackage[normalem]{ulem}
+\usepackage{circuitikz}
+
+\ctikzset{voltage/bump b/.initial=0}
+
+\renewcommand*\contentsname{Indice}
+
+\title{Oscilloscopio digitale}
+\author{Simone Aronica, Giovanni Bloise, \\
+Gabriele Camisa, Giuseppe Casale}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\pagebreak
+
+\section*{TODO}
+
+\section{Strumenti usati}
+\begin{itemize}
+    \item Multimetro HP 34401A
+    \item Rigol DS1054-Z
+    \item Generatore di funzioni
+    \item Cavi coassiali
+\end{itemize}
+
+\section{Misurazione di valore efficace e frequenza}
+La prima parte dell'esperienza consiste nella misurazione del valore efficace e della frequenza di un segnale sinusoidale
+per mezzo dell'oscilloscopio digitale e nella correlazione dell'incertezza attesa. 
+
+Il segnale misurato è stato generato tramite il generatore di funzioni come una sinusoide di ampiezza picco-picco \SI{1}{\volt} a frequenza \SI{1}{\kilo\hertz}.
+
+\subsection{Misura del valore efficace}
+La misura del valore efficace è stata derivata in maniera indiretta dalla misura dell'ampiezza picco-picco del segnale. 
+
+Tale misura è stata effettuata tramite l'oscilloscopio digitale impostando la costante di taratura verticale a $K_{\text{V}} = \SI{200}{\milli\volt}/\text{div}$ e misurando i due valori di picco in negativo e in positivo del segnale 
+(rispettivamente $y_1 = -2.5\ \text{div} $ e $y_2 = 2.5\ \text{div}$). È stata considerata un'incertezza di lettura pari a $\frac{1}{2}$ della risoluzione dello strumento (ovvero $\frac{1}{10}$ div).
+che è stata valutata come 
+$V_{\text{pp}}=(1.000\pm0.088)\SI{}{\volt}$. L'incertezza è stata calcolata secondo il modello deterministico:
+\begin{equation*}
+    \begin{split}
+        \delta V_{\text{pp}}&=\left|\frac{\partial V_{\text{pp}}}{\partial y_1}\right|\delta y_1+\left|\frac{\partial V_{\text{pp}}}{\partial y_2}\right|\delta y_2+\left|\frac{\partial V_{\text{pp}}}{\partial K_{\text{V}}}\right|\delta K_{\text{V}}=\\
+        &=\left|K_{\text{V}}\right|\delta y_1 + \left|K_{\text{V}}\right|\delta y_2 + (y_2 - y_1)\delta K_{\text{V}}
+    \end{split}
+\end{equation*}
+
+\subsection{Misurazione di frequenza}
+
+\subsection{Verifica con multimetro}
+
+\section{Misurazione del tempo di salita}
+
+\subsection{Operazioni preliminari}
+
+\subsection{Tempo di salita in condizione di adattamento di impedenza}
+
+\subsection{Tempo di salita con generatore ad alta impedenza (uso della sonda compensata)}
+
+
+
+\section{Conclusioni}
+
+\end{document}

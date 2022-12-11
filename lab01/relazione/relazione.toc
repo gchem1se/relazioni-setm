@@ -1,0 +1,12 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\numberline {1}Strumenti usati}{2}{}%
+\contentsline {section}{\numberline {2}Misurazione di valore efficace e frequenza}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Misura del valore efficace}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Misurazione di frequenza}{3}{}%
+\contentsline {subsection}{\numberline {2.3}Verifica con multimetro}{3}{}%
+\contentsline {section}{\numberline {3}Misurazione del tempo di salita}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Operazioni preliminari}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Tempo di salita in condizione di adattamento di impedenza}{3}{}%
+\contentsline {subsection}{\numberline {3.3}Tempo di salita con generatore ad alta impedenza (uso della sonda compensata)}{3}{}%
+\contentsline {section}{\numberline {4}Conclusioni}{3}{}%

@@ -1,0 +1,14 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\numberline {1}TODO}{2}{}%
+\contentsline {section}{\numberline {2}Strumenti usati}{2}{}%
+\contentsline {section}{\numberline {3}Sintesi dell'esperienza}{2}{}%
+\contentsline {section}{\numberline {4}Filtro passa-basso}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Frequenza di taglio}{3}{}%
+\contentsline {subsection}{\numberline {4.2}Campionamento della risposta in frequenza}{4}{}%
+\contentsline {subsection}{\numberline {4.3}Diagrammi di Bode}{5}{}%
+\contentsline {section}{\numberline {5}Filtro passa-alto}{6}{}%
+\contentsline {subsection}{\numberline {5.1}Frequenza di taglio}{7}{}%
+\contentsline {subsection}{\numberline {5.2}Campionamento della risposta in frequenza}{7}{}%
+\contentsline {subsection}{\numberline {5.3}Diagrammi di Bode}{8}{}%
+\contentsline {section}{\numberline {6}Conclusioni}{9}{}%

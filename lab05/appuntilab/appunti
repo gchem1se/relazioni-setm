@@ -1,0 +1,18 @@
+1 kOhm
+va misurato con Ohmetro
+
+poi 
+il divisore di tensione è solo un partitore di tensione tra la resistenza da 1 kOhm e quella di  
+
+R = 976 Ohm con il multimetro in realtà
+
+32.65
+30.508 di media
+24.26 di media 2
+
+
+insieme alla media va calcolata l'incertezza media su theta 
+
+il contributo di incertezza dato da Dout va considerato; a cosa è uguale? 2 LSB, come nell'altro lab.
+
+ricordati che la r0ba scritta sul 9cazzo di gius3eppe in realtà è calcolata solo lsull'3ultima misura e non è una media, usa lo script.3
