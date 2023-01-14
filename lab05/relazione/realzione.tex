@@ -120,7 +120,7 @@ void setup() {
 
 void loop() {
     int Dout = analogRead(pin); 
-    double T = -(A/(2*B))-sqrt(pow(A,2)/(4*pow(B,2))-1/(R0*B)*R0+Rf-pow(2, 10)/Dout*Rf);
+    double T = -(A/(2*B))-sqrt(pow(A,2)/(4*pow(B,2))-1/(R0*B)*(R0+Rf-pow(2, 10)/Dout*Rf));
     
     Serial.print("Valore sensore: ");
     Serial.println(Dout);
