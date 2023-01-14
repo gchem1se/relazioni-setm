@@ -1,13 +1,12 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {section}{\numberline {1}TODO}{2}{}%
-\contentsline {section}{\numberline {2}Strumenti usati}{2}{}%
-\contentsline {section}{\numberline {3}Sintesi dell'esperienza}{2}{}%
-\contentsline {section}{\numberline {4}Prima configurazione}{2}{}%
-\contentsline {subsection}{\numberline {4.1}Firmware}{3}{}%
-\contentsline {subsection}{\numberline {4.2}Valutazione dell'incertezza}{4}{}%
-\contentsline {section}{\numberline {5}Seconda configurazione}{4}{}%
-\contentsline {subsection}{\numberline {5.1}Modifiche al circuito di condizionamento}{4}{}%
-\contentsline {subsection}{\numberline {5.2}Modifiche al firmware}{5}{}%
-\contentsline {subsection}{\numberline {5.3}Valutazione dell'incertezza}{5}{}%
-\contentsline {section}{\numberline {6}Conclusioni}{6}{}%
+\contentsline {section}{\numberline {1}Strumenti usati}{2}{}%
+\contentsline {section}{\numberline {2}Sintesi dell'esperienza}{2}{}%
+\contentsline {section}{\numberline {3}Prima configurazione}{2}{}%
+\contentsline {subsection}{\numberline {3.1}Firmware}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Valutazione dell'incertezza}{4}{}%
+\contentsline {section}{\numberline {4}Seconda configurazione}{4}{}%
+\contentsline {subsection}{\numberline {4.1}Modifiche al circuito di condizionamento}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Modifiche al firmware}{5}{}%
+\contentsline {subsection}{\numberline {4.3}Valutazione dell'incertezza}{5}{}%
+\contentsline {section}{\numberline {5}Conclusioni}{6}{}%

@@ -40,6 +40,7 @@ sensore LM335 e
 scheda Arduino Uno}
 \author{Simone Aronica, Giovanni Bloise, \\
 Gabriele Camisa, Giuseppe Casale}
+\date{}
 
 \begin{document}
 
@@ -47,25 +48,19 @@ Gabriele Camisa, Giuseppe Casale}
 \tableofcontents
 \pagebreak
 
-\section{TODO}
-\begin{itemize}
-    \item Dobbiamo mettere negli strumenti usati il multimetro 
-    \item Dobbiamo fare di ogni strumento un minimo di caratteristiche (quelle usate, dal datasheet, e descrizione generale)
-    \item Nelle conclusioni scrivere che figata guarda con la seconda conf va meglio
-    \item Controllare italiano
-    \item Controllare matematica
-    \item Ma andavano messe immagini? E vabbè, tanto non le abbiamo anche volendo
-    \item Ma andavano disegnati i circuiti?
-    \item sesso
-\end{itemize}
 \section{Strumenti usati}
 \begin{itemize}
     \item Arduino Uno
+    Lo abbiamo utilizzato come ADC con 10 bit di risoluzione. L'Arduino da una tensione di alimentazione di 5V ed è collegato tramite porta USB 2.0 che ha $V_{\text{cc}} = 5 \pm \SI{0.25}{\volt}$.
     \item Sensore LM335
-        \begin{itemize}
-            \item campo di temperatura: $\left(-40\div100\right)\SI{}{\celsius}$
-            \item incertezza strumentale a temperatura ambiente (modello deterministico): $\delta T= \pm\SI{2}{\celsius}$
-        \end{itemize}
+    diodo Zener con tensione di breakdown proporzionale alla temperatura assoluta T(K)
+    \begin{itemize}
+        \item Campo di temperatura: (-40 : 100)°C
+        \item Uscita riferita allo zero assoluto: Vout=0K=-273,15 °C
+        \item Sensibilità nominale S=10mV/K
+        \item Incertezza strumentale a temperatura ambiente (modello deterministico): dT= +-2°C
+        \item Resistenza termica: 165 °C/W
+    \end{itemize}
     \item Multimetro HP 34401A
 \end{itemize}
 
@@ -186,5 +181,7 @@ da cui si ricava:
 \end{equation*}
 per cui dalla misura della temperatura ambientale con la seconda configurazione risulta infine: $T = \SI{18.18}{\celsius}, 59\%$.
 \section{Conclusioni}
-sono compatibili le misure ed era sceso il sole. abbiamo notato che è meglio la seconda conf. Giovanni please explain.
+Si è sperimentata la realizzazione di un circuito di condizionamento tramite Arduino Uno in due diverse configurazioni e valutata l'incertezza sulla misurazione che ne è derivata. In particolare, si è notato come la seconda configurazione ha portato ad un significativo miglioramento sull'incertezza della misura dichiarata. L'esperienza ha quindi dimostrato l'importanza del progetto preliminare del circuito di condizionamento sul risultato delle operazioni di misura
+e ha costituito un esempio di quali siano i criteri da ricercare in tale circuito (in questo caso, un contributo di incertezza minimo sulla tensione utilizzata come riferimento).
+Le misurazioni derivate dalle due configurazioni sono da considerare tra loro compatibili e a loro volta compatibili con la stima personale delle reali condizioni di temperatura dell'ambiente del laboratorio. 
 \end{document}
