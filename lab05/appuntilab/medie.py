@@ -1,7 +1,11 @@
 import numpy as np
 
-def inc(mis):
-    return 0.3+0.005*np.abs(mis)
+def dout(mis):
+  A = 3.9083 * 10 ** (-3)
+  B = -5.775 * 10 ** (-7)
+  Rf = 976
+  R0 = 100
+  return ( (2**10) * (Rf) ) / ((R0*B)*( - (mis**2) - ((A**2) / (4 * (B**2))) - (A * mis / B) - ((A**2) / (4 * (B**2))) ) + (R0) + (Rf) )
 
 misure = [
     26.54,
@@ -30,9 +34,6 @@ misure = [
 totmis = 0
 totunc = 0
 for mis in misure:
-    totmis+=mis
-    totunc+=inc(mis)
-    print("{}+-{}".format(mis, inc(mis)))
+    print("{}, Dout = {}".format(mis, dout(mis)))
 
 print("---")
-print("{}+-{}".format(totmis/len(misure), totunc/len(misure)))
