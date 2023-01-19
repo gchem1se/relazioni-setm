@@ -50,9 +50,9 @@ Gabriele Camisa, Giuseppe Casale}
 
 \section{Strumenti usati}
 \begin{itemize}
-    \item Arduino Uno
+    \item Arduino Uno:
     Lo abbiamo utilizzato come ADC con 10 bit di risoluzione. L'Arduino da una tensione di alimentazione di 5V ed è collegato tramite porta USB 2.0 che ha $V_{\text{cc}} = 5 \pm \SI{0.25}{\volt}$.
-    \item Sensore LM335
+    \item Sensore LM335:
     diodo Zener con tensione di breakdown proporzionale alla temperatura assoluta T(K)
     \begin{itemize}
         \item Campo di temperatura: (-40 : 100)°C
@@ -74,7 +74,7 @@ Ipotizzando che la temperatura ambientale sia tra $\SI{5}{\celsius}$ e $\SI{50}{
     I_{D,\min}=\frac{V_s-V_{\text{out}, \max}}{R_1} > \SI{0.4}{\milli\ampere}\\
     I_{D,\max}=\frac{V_s-V_{\text{out}, \min}}{R_1} < \SI{5}{\milli\ampere}
 \end{align*}
-è stato ottenuto che una resistenza di $\SI{1}{\kilo\Omega}$ risulti accettabile.
+una resistenza di $\SI{1}{\kilo\Omega}$ risulta accettabile.
 \begin{figure}[H]
     \centering\includegraphics[width=200px]{img/circuito_1.png}
     \caption{Schema circuitale della prima configurazione}
@@ -181,7 +181,9 @@ da cui si ricava:
 \end{equation*}
 per cui dalla misura della temperatura ambientale con la seconda configurazione risulta infine: $T = \SI{18.18}{\celsius}, 59\%$.
 \section{Conclusioni}
-Si è sperimentata la realizzazione di un circuito di condizionamento tramite Arduino Uno in due diverse configurazioni e valutata l'incertezza sulla misurazione che ne è derivata. In particolare, si è notato come la seconda configurazione ha portato ad un significativo miglioramento sull'incertezza della misura dichiarata. L'esperienza ha quindi dimostrato l'importanza del progetto preliminare del circuito di condizionamento sul risultato delle operazioni di misura
+Si è sperimentata la realizzazione di un circuito di condizionamento tramite Arduino Uno in due diverse configurazioni e valutata l'incertezza sulla misurazione che ne è derivata. In particolare, si è notato come la seconda configurazione abbia portato ad un significativo miglioramento sull'incertezza della misura dichiarata. 
+
+L'esperienza ha quindi dimostrato l'importanza del progetto preliminare del circuito di condizionamento sul risultato delle operazioni di misura
 e ha costituito un esempio di quali siano i criteri da ricercare in tale circuito (in questo caso, un contributo di incertezza minimo sulla tensione utilizzata come riferimento).
-Le misurazioni derivate dalle due configurazioni sono da considerare tra loro compatibili e a loro volta compatibili con la stima personale delle reali condizioni di temperatura dell'ambiente del laboratorio. 
+Le misurazioni derivate dalle due configurazioni sono tra loro compatibili e a loro volta confrontabili con una stima personale delle reali condizioni di temperatura dell'ambiente del laboratorio. 
 \end{document}

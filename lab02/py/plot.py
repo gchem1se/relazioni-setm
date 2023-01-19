@@ -50,11 +50,11 @@ def get_data(filepath, myfilter, mytoplot):
             e["value_deg"] = toDeg(np.abs(e["value"]) / (5*e["uncert"]), e["frequency"], e["uncert"])
             e["uncert_deg"] = toDeg(1/5, e["frequency"], e["uncert"])
 
-    return float(d[myfilter]["cutoff_frequency"]["value"]), d[myfilter]["samples"][mytoplot]
+    return float(d[myfilter]["cutoff_frequency"]["value"]), float(d[myfilter]["cutoff_frequency"]["uncert"]), d[myfilter]["samples"][mytoplot]
 
 # -------- #
 
-cutoff, samples = get_data(FILEPATH, FILTER, TOPLOT)
+cutoff, cutoff_err, samples = get_data(FILEPATH, FILTER, TOPLOT)
 
 if TOPLOT == "module":
     x = np.array([x["frequency"] for x in samples])
@@ -67,5 +67,5 @@ else:
     x = np.array([x["frequency"] for x in samples])
     y = np.array([x["value_deg"] for x in samples])
     err = np.array([x["uncert_deg"] for x in samples])
-        
-Bode(x, y, err=err, cutoff=cutoff) # wrapper for matplotlib, semilogarithmic graphing and shit 
+
+Bode(x, y, err=err, cutoff=cutoff, cutoff_err=cutoff_err, toPlot=TOPLOT) # wrapper for matplotlib, semilogarithmic graphing and shit 

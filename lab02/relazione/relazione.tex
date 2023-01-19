@@ -23,22 +23,6 @@ Gabriele Camisa, Giuseppe Casale}
 \tableofcontents
 \pagebreak
 
-\section{TODO}
-\begin{itemize}
-  \item coddio, ricontrolla le incertezze sulla frequenza di taglio, guarda che il passa alto non ha due cosi in parallelo! rimane uguale l'incertezza!
-  \item CODDIO ABBIAMO PRESO LE MISURE CON L'INTERRUTTORE CHIUSO NEL PASSA BASSO... DOVEVAMO ESCLUDERLO... ALMENO CREDO... DIO CANE
-  \item gli strumenti! [+ vanno anche i cavi negli strumenti?]
-  \item ma vogliamo tabulare anche le incertezze della funzione di trasferimento in dB (quelle asimmetriche, secondo me non serve)?
-  \item le conclusioni (cioè boooom guarda abbiamo l'attenuazione di almeno -3 dB sulla frequenza di taglio, cioè, spaziale ****)
-  \item vanno fatti i diagrammi di bode asintotici? volendo si può eh, tanto dobbiamo farli comunque per il lab4, boh nsomma vedi un po'
-  \item \sout{guarda che nelle tabelle voleva gradi per la differenza di fase, non tempi}
-  \item \sout{controlla la formula per calcolare i gradi.} (ora dovrebbe andare), credo.
-  \item \sout{andava plottato il modulo della funzione di trasferimento in teoria, non il modulo e basta.} il volere divino si è compiuto, alleluia, alleluia.
-  \item \sout{ora mancano sicuro le immagini.} più che altro, controllale, ma dovrebbero essere ok.
-  \item fatti, please, un diagramma asintotico a mano, metti che stai cannando qualcosa.
-  \item \sout{ma è normale che in logaritmico ci sia più incertezza in negativo che in positivo nel passa alto?} (si, esce così)
-\end{itemize}
-
 \section{Strumenti usati}
 \begin{itemize}
     \item Multimetro HP 34401A
@@ -220,12 +204,12 @@ con un'incertezza pari a:
 \end{figure}
 
 \section{Conclusioni}
-Con i dati sperimentali raccolti, analizzando il filtro RC, abbiamo ottenuto le varie funzioni di trasferimento 
-(e le relativa frequenze di taglio) dei segnali sinusoidali e ad onda quadra filtrati inizialmente 
-con un filtro passa-basso e,successivamente, con un filtro passa-alto; Ciò che abbiamo 
-ottenuto è conforme a ciò che ci aspettavamo,ossia un attenuazione di circa 3dB nella
-frequenza di taglio; Il tutto può essere osservato graficamente mediante i diagrammi
-di bode ottenuti dove:
->il filtro passa-basso lascia passare solo le frequenze inferiori alla frequenza  di taglio
->il filtro passa-alto lascia passare solo le frequenze superiori a quella di taglio.
+Dai dati raccolti abbiamo ottenuto interpolazioni delle funzioni di trasferimento empiriche 
+e ne abbiamo notato la coerenza con i modelli teorici di trasferimento per filtro passa-basso e passa-alto.
+In particolare verifichiamo:
+\begin{itemize}
+	\item l'attenuazione di $\SI{3}{\dB}$ del modulo del segnale in corrispondenza della frequenza di taglio  
+	\item lo sfasamento di $\SI{90}{\degree}$ del segnale nello spazio di due decadi centrato nella frequenza di taglio.
+\end{itemize}
+
 \end{document}

@@ -46,7 +46,9 @@ def toLatexTable(entries, caption):
     
 def Bode(x, y, **kwargs):
     err = kwargs.get("err", [])
-    cutoff = kwargs.get("cutoff", None)
+    cutoff = kwargs.get("cutoff", None)    
+    cutoff_err = kwargs.get("cutoff_err", None)
+    toPlot = kwargs.get("toPlot", None)
     fig, axs = plt.subplots(1)
     axs.plot(x, y, '-ok')
     axs.set_yscale("linear")
@@ -55,11 +57,25 @@ def Bode(x, y, **kwargs):
     if len(err) != 0:
         axs.errorbar(x, y, yerr=err, color='k')
     if cutoff != None:
-        axs.axvline(x = cutoff, ls='--', color='r')
-    axs.axhline(y = -3, ls='--', color='r')
+        axs.axvline(x = cutoff, ls='--', color='r')        
+        axs.axvline(x = cutoff-cutoff_err, ls='--', color='r')
+        axs.axvline(x = cutoff+cutoff_err, ls='--', color='r')
+        axs.axvspan(cutoff-cutoff_err, cutoff+cutoff_err, alpha=0.3, color='red')
+    if toPlot == "module":
+        axs.axhline(y = -3, ls='--', color='r')
+    else:
+        axs.axvline(x = cutoff/10, ls='--', color='r')
+        axs.axvline(x = (cutoff-cutoff_err)/10, ls='--', color='r')
+        axs.axvline(x = (cutoff+cutoff_err)/10, ls='--', color='r')
 
+        axs.axvline(x = cutoff*10, ls='--', color='r')
+        axs.axvline(x = (cutoff-cutoff_err)*10, ls='--', color='r')
+        axs.axvline(x = (cutoff+cutoff_err)*10, ls='--', color='r')
+
+        axs.axvspan((cutoff-cutoff_err)/10, (cutoff+cutoff_err)*10, alpha=0.1, color='red')
+        
     for i, txt in enumerate(y):
         axs.annotate("  "+str(round(float(txt), 2)), (x[i], y[i]+0.6))
-    
+
     plt.show()
 
