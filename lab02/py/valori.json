@@ -1,8 +1,8 @@
 {
 	"low_pass": {
 		"cutoff_frequency": {
-			"value": "8000",
-			"uncert": "3600",
+			"value": "7790",
+			"uncert": "1560",
 			"unit": "hertz"			 
 		},
 		"units": {
@@ -175,8 +175,8 @@
 	},
 	"high_pass": {
 		"cutoff_frequency": {
-			"value": "16000",
-			"uncert": "4000",
+			"value": "15590",
+			"uncert": "3120",
 			"unit": "hertz"			 
 		},
 		"units": {

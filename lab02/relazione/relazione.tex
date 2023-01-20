@@ -60,11 +60,11 @@ Per il campionamento della risposta in frequenza del segnale d'ingresso è stato
 \subsection{Frequenza di taglio}
 La frequenza di taglio del filtro passa-basso è pari a:
 \begin{equation*}
-	f_{T}=\frac{1}{2\pi RC}=\frac{1}{2\pi\cdot\SI{1021}{\ohm}\cdot\SI{20}{\nano\farad}}=\SI{8.0}{\kilo\hertz}
+	f_{T}=\frac{1}{2\pi RC}=\frac{1}{2\pi\cdot\SI{1021}{\ohm}\cdot\SI{20}{\nano\farad}}=\SI{7.79}{\kilo\hertz}
 \end{equation*}
 con un'incertezza pari a:
 \begin{equation*}
-	\epsilon f_{T}=\epsilon R+\epsilon C = 5\%+40\% = 45\% \Rightarrow\delta f_T = \SI{3.6}{\kilo\hertz}
+	\delta f_{T}=\left|\frac{\partial f_{T}}{\partial R}\right|\delta R+\left|\frac{\partial f_{T}}{\partial C}\right|\delta C = \SI{1.56}{\kilo\hertz}
 \end{equation*}
 
 \subsection{Campionamento della risposta in frequenza}
@@ -138,13 +138,13 @@ con un'incertezza pari a:
 
 
 \subsection{Frequenza di taglio}
-La frequenza di taglio del filtro passa-basso è pari a:
+La frequenza di taglio del filtro passa-alto è pari a:
 \begin{equation*}
-	f_{T}=\frac{1}{2\pi RC}=\frac{1}{2\pi\cdot\SI{1021}{\ohm}\cdot\SI{10}{\nano\farad}}=\SI{16.0}{\kilo\hertz}
+	f_{T}=\frac{1}{2\pi RC}=\frac{1}{2\pi\cdot\SI{1021}{\ohm}\cdot\SI{10}{\nano\farad}}=\SI{15.59}{\kilo\hertz}
 \end{equation*}
 con un'incertezza pari a:
 \begin{equation*}
-	\epsilon f_{T}=\epsilon R+\epsilon C = 5\%+20\% = 25\% \Rightarrow\delta f_T = \SI{4.0}{\kilo\hertz}
+	\delta f_{T}=\left|\frac{\partial f_{T}}{\partial R}\right|\delta R+\left|\frac{\partial f_{T}}{\partial C}\right|\delta C = \SI{3.12}{\kilo\hertz}
 \end{equation*}
 
 \subsection{Campionamento della risposta in frequenza}
@@ -208,8 +208,8 @@ Dai dati raccolti abbiamo ottenuto interpolazioni delle funzioni di trasferiment
 e ne abbiamo notato la coerenza con i modelli teorici di trasferimento per filtro passa-basso e passa-alto.
 In particolare verifichiamo:
 \begin{itemize}
-	\item l'attenuazione di $\SI{3}{\dB}$ del modulo del segnale in corrispondenza della frequenza di taglio  
-	\item lo sfasamento di $\SI{90}{\degree}$ del segnale nello spazio di due decadi centrato nella frequenza di taglio.
+	\item un'attenuazione comparabile ai canonici $\SI{3}{\dB}$ del modulo del segnale in corrispondenza della frequenza di taglio  
+	\item uno sfasamento comparabile ai $\SI{90}{\degree}$ teorici del segnale nello spazio di due decadi centrato nella frequenza di taglio.
 \end{itemize}
 
 \end{document}
