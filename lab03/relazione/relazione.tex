@@ -144,7 +144,7 @@ $R_2$ ed $R_3$, posizionate in modo tale da poter prelevare dai capi di $R_3$ un
     \caption{Schema circuitale della seconda configurazione}
 \end{figure}
 I valori di tali resistenze sono stati determinati in modo da ottenere una attenuazione $\ge 3$; in particolare sono state scelte 
-$R_2 = \SI{68}{\kilo\Omega}$ e $R_3=\SI{33}{\kilo\Omega}$. Dalla misurazione delle stesse con il multimetro digitale sono emerse le misure $R_2=\left(68610\pm786\right)\SI{}{\Omega}$ e $R_3=\left(3570\pm426\right)\SI{}{\Omega}$.
+$R_2 = \SI{68}{\kilo\Omega}$ e $R_3=\SI{33}{\kilo\Omega}$. Dalla misurazione delle stesse con il multimetro digitale sono emerse le misure $R_2=\left(68610.00\pm7.86\right)\SI{}{\Omega}$ e $R_3=\left(32570.00\pm4.26\right)\SI{}{\Omega}$.
 Il valore ottenuto dalla misurazione della temperatura ambientale con questa seconda configurazione si è attestato su $\SI{18.18}{\celsius}$, con $D_{\text{out}, \max} = 903$.
 \subsection{Modifiche al firmware}
 Il cambio della tensione di riferimento si realizza nel firmware, tramite l'aggiunta della direttiva
@@ -178,12 +178,12 @@ da cui si ricava:
 \begin{equation*}
     \begin{split}
         \delta T&=\frac{\SI{1.1}\volt}{\SI{10}{\milli\volt\per\kelvin}\cdot2^{10}}\cdot 2+\frac{903}{\SI{10}{\milli\volt\per\kelvin}\cdot 2^{10}}\cdot\SI{0.1}{\volt}+\SI{2}{\kelvin}+\\
-        &+\frac{903\cdot\SI{1.1}{\volt}}{\SI{10}{\milli\volt\per\kelvin}\cdot 2^{10}\cdot \SI{32570}{\Omega}}\cdot\SI{786}{\Omega}+\\
-        &- \frac{903\cdot\SI{1.1}{\volt}\cdot\SI{68610}{\Omega}}{\SI{10}{\milli\volt\per\kelvin}\cdot 2^{10}\cdot{\left(\SI{32570}{\Omega}\right)}^2}\cdot\SI{426}{\Omega}=\\
-        &=\SI{10.70}{\kelvin}
+        &+\frac{903\cdot\SI{1.1}{\volt}}{\SI{10}{\milli\volt\per\kelvin}\cdot 2^{10}\cdot \SI{32570}{\Omega}}\cdot\SI{7.86}{\Omega}+\\
+        &- \frac{903\cdot\SI{1.1}{\volt}\cdot\SI{68610}{\Omega}}{\SI{10}{\milli\volt\per\kelvin}\cdot 2^{10}\cdot{\left(\SI{32570}{\Omega}\right)}^2}\cdot\SI{4.26}{\Omega}=\\
+        &=\SI{11.03}{\kelvin}
     \end{split}
 \end{equation*}
-per cui dalla misura della temperatura ambientale con la seconda configurazione risulta infine: $T = \SI{18.18}{\celsius}, 59\%$.
+per cui dalla misura della temperatura ambientale con la seconda configurazione risulta infine: $T = \SI{18.18}{\celsius}, 60\%$.
 \section{Conclusioni}
 Si è sperimentata la realizzazione di un circuito di condizionamento tramite Arduino Uno in due diverse configurazioni e valutata l'incertezza sulla misurazione che ne è derivata. In particolare, si è notato come la seconda configurazione abbia portato ad un significativo miglioramento sull'incertezza della misura dichiarata. 
 
