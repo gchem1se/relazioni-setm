@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1674174960 "/home/gchemise/relazioni-setm/lab05/relazione/relazione.tex" "relazione.pdf" "relazione" 1674174961
-  "/home/gchemise/relazioni-setm/lab05/relazione/relazione.tex" 1674174959 6197 e8e9587d3fcfeb320ecef6aeba6ccdf1 ""
+["pdflatex"] 1674185819 "/home/gchemise/relazioni-setm/lab05/relazione/relazione.tex" "relazione.pdf" "relazione" 1674185820
+  "/home/gchemise/relazioni-setm/lab05/relazione/relazione.tex" 1674185819 8647 2e5f10cd6bd7a8283c0935446c93937f ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1650183167 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -33,6 +33,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1650183167 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1650183167 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1650183167 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1650183167 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1650183167 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb" 1650183167 24287 6b803fa9eb1ddff9112e00519b09dd9e ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1650183167 138258 6525c253f16cededa14c7fd0da7f67b2 ""
@@ -82,9 +83,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1669314352 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1669314311 2927663 2e6c0fc65d60be1001e40f632ce22d75 ""
-  "relazione.aux" 1674174961 885 e55fbb9597c83df1c7552a76acd1357d "pdflatex"
-  "relazione.tex" 1674174959 6197 e8e9587d3fcfeb320ecef6aeba6ccdf1 ""
-  "relazione.toc" 1674174961 524 c0bddb8e18a31887669c20a6bc28b698 "pdflatex"
+  "relazione.aux" 1674185820 1009 887a871fc58365ccb58082c5e73662b1 "pdflatex"
+  "relazione.tex" 1674185819 8647 2e5f10cd6bd7a8283c0935446c93937f ""
+  "relazione.toc" 1674185820 524 a40a4a4890b0cbc07ad2af5d94f89382 "pdflatex"
   (generated)
   "relazione.aux"
   "relazione.log"

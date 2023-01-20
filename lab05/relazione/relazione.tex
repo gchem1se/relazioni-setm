@@ -63,6 +63,8 @@ Gabriele Camisa, Giuseppe Casale}
             \item $A=3.9083\cdot10^{-3}\SI{}{\per\celsius}$
             \item $B=-5.775\cdot10^{-7}\SI{}{\per\celsius}$
         \end{itemize}
+    \item classe II $\rightarrow \delta\theta^\text{sens}=(0.3+0.005\cdot|\theta|)\SI{}{\celsius}$. Il termine incorpora le incertezze dovute ai parametri $A$, $B$ e $R_0$, dei quali non sono disponibili le singole incertezze.
+    \item resistenza termica: $\SI{100}{\celsius\per\watt}$
     \end{itemize}
     \item Multimetro HP 34401A
 \end{itemize}
@@ -73,38 +75,38 @@ L'esperienza consiste nella misurazione della temperatura ambientale in laborato
 \section{Circuito di condizionamento}
 La scheda Arduino Uno implementa un convertitore analogico-digitale a 10 bit con cui è possibile convertire un voltaggio in input, in un range da \SI{0}{\volt} alla tensione di riferimento di \SI{5}{\volt}, in codici digitali da 0 a 1023. 
 Il sensore PT100 incorpora una resistenza dipendente dalla temperatura, per cui è possibile ottenere come output la tensione su una resistenza posta in serie al sensore stesso.
+Dato che la tensione di alimentazione dell'ADC è usata anche come tensione di riferimento, la misura è definibile raziometrica.
 
-Per ottimizzare la sensibilità $S_{V_F}^{\theta}=\frac{\partial{V_F}}{\partial{\theta}}$, rimanendo contemporaneamente in condizioni di autoriscaldamento accettabili, si è collegato il PT100 in una configurazione di partizione resistiva con un resistore di valore nominale $R_F=\SI{1}{\kilo\ohm}$ (successivamente rivalutato a $(976.00\pm10.76)\SI{}{\ohm}$ tramite il multimetro digitale). La tensione di output del circuito di condizionamento $V_F$ è stata prelevata ai capi di $R_F$.
-La serie è stata alimentata tramite USB 2.0 ad una tensione di $V_S=(5.00\pm0.25)\SI{}{\volt}$.
+Per ottimizzare la sensibilità $S_{V_F}^{\theta}=\frac{\partial{V_F}}{\partial{\theta}}$, rimanendo contemporaneamente in condizioni di autoriscaldamento accettabili, si è collegato il PT100 in una configurazione di partizione resistiva con un resistore di valore nominale $R_F=\SI{1}{\kilo\ohm}$ (successivamente rivalutato a $(976.00\pm0.11)\SI{}{\ohm}$ tramite il multimetro digitale). La tensione di output del circuito di condizionamento $V_F$ è stata prelevata ai capi di $R_F$.
+La serie è stata alimentata tramite USB 2.0 ad una tensione di $V_S=V_\text{CC}=(5.00\pm0.25)\SI{}{\volt}$.
 Con questa configurazione si ha una sensibilità di $S_{V_F}^{\theta}=\SI{-1.54}{\milli\volt\per\celsius}$ e un autoriscaldamento $\Delta\theta_{\text{s-o}}\approx\SI{0.2}{\celsius}$.
 \subsection{Valutazione dell'incertezza}
 La funzione di taratura
 \begin{equation*}
     \theta=-\frac{A}{2\cdot B} - \sqrt{\frac{A}{4\cdot B^2} - \frac{1}{R_0\cdot B}\cdot\left(R_0+R_F-\frac{V_S}{V_F}\cdot R_F\right)}
 \end{equation*}
-si può manipolare notando che è possibile eliminare la dipendenza da (TODO: Aggiungere Vcc):
+si può manipolare dato che si sta operando utilizzando la stessa tensione $V_{\text{CC}}$ di alimentazione come riferimento, ridefinendola come:
+\begin{equation*}
+    \theta=-\frac{A}{2\cdot B} - \sqrt{\frac{A}{4\cdot B^2} - \frac{1}{R_0\cdot B}\cdot\left(R_0+R_F-\frac{2^{N_b}}{D_\text{out}}\cdot R_F\right)}
+\end{equation*}
+dato che 
 \begin{equation*}
     \begin{split}
-        V_q = \frac{V_{FR}}{2^{N_b}}=\frac{V_{CC}}{2^{N_b}}\\
         &D_{\text{out}} = V_{\text{CC}} \cdot \frac{R_F}{R_F + R_{\theta}}\cdot\frac{1}{V_{q}}\\
-        &D_{\text{out}} = V_{\text{CC}} \cdot \frac{R_F}{R_F + R_{\theta}}\cdot\frac{2^{N_b}}{V_{CC}}\\
-        &D_{\text{out}} = 5^{N_b} \cdot \frac{R_F}{R_F + R_{\theta}}
+        &V_q = \frac{V_{FR}}{2^{N_b}}=\frac{V_{CC}}{2^{N_b}} \implies \\
+        \implies&D_{\text{out}} = V_{\text{CC}} \cdot \frac{R_F}{R_F + R_{\theta}}\cdot\frac{2^{N_b}}{V_{CC}}\\
+        &D_{\text{out}} = 2^{N_b} \cdot \frac{R_F}{R_F + R_{\theta}}
     \end{split}
 \end{equation*}
-
-L'incertezza assoluta sulla temperatura dipende quindi solo da $D_{\text{out}}$, $R_F$ e dal sensore.
+L'incertezza assoluta sulla temperatura dipende allora, secondo il modello deterministico, solo da $D_{\text{out}}$, $R_F$ e dalle incertezze sulle caratteristiche del sensore.
 \begin{equation*}
     \begin{split}
-        \delta\theta&=\left|S_{\theta}^{V_s}\right|\delta V_s+\left|S_{\theta}^{V_F}\right|\delta V_F+\left|S_{\theta}^{R_F}\right|\delta R_F+\delta \theta^{\text{sens}}\\
-        &=-\frac{R_f}{2B R_0 V_F \sqrt{\frac{A^2}{4B^2} - \frac{C-\frac{R_f V_s}{V_F}+R_F}{B R_0}}}\cdot\delta V_s +\\
-        &\frac{R_F V_s}{2BR_0 V_F^2\sqrt{\frac{A^2}{4B^2}-\frac{R_0 - \frac{R_F V_s}{V_F} + R_F}{B R_0}}}\cdot\delta V_F +\\
-        &\frac{1-\frac{V_S}{V_F}}{2B R_0 \sqrt{\frac{A^2}{4B^2} - \frac{R_0-\frac{R_F V_S}{V_F} +R_F}{B R_0}}}\cdot\delta R_F+\delta \theta^{\text{sens}}
+        \delta\theta&=\left|\frac{\partial{\theta}}{\partial{D_\text{out}}}\right|\delta D_\text{out}+\left|\frac{\partial{\theta}}{\partial{R_\text{F}}}\right|\delta R_\text{F}+\delta \theta^\text{sens}=\\
+        &=\left|\frac{2^{N_b-1}\cdot R_F}{B\cdot R_0\cdot D_\text{out}^2\cdot\sqrt{\frac{A^2}{4B^2}-\frac{R_0+R_F-\frac{2^{N_b}\cdot R_F}{D_\text{out}}}{B\cdot R_0}}}\right|\delta D_\text{out}+\\
+        &+\left|\frac{1-\frac{2^{N_b}}{D_\text{out}}}{2\cdot B\cdot R_0 \cdot \sqrt{\frac{A^2}{4B^2}-\frac{R_0+R_F-\frac{2^{N_b}\cdot R_F}{D_\text{out}}}{B\cdot R_0}}}\right|\delta R_\text{F}+\\
+        &+\delta \theta^\text{sens}
     \end{split}
 \end{equation*}
-dove il termine $\delta\theta^\text{sens}=(0.3+0.005\cdot|\theta|)\SI{}{\celsius}$ incorpora le incertezze dovute ai parametri $A$, $B$ e $R_0$, dei quali non sono disponibili le singole incertezze.
-
-
-
 
 
 \subsection{Firmware}
@@ -136,6 +138,60 @@ void loop() {
 }
 \end{lstlisting}
 \subsection{Dithering}
-Il valore finale è calcolato come media su 20 misurazioni, da cui si ricava un valore di $\SI{26.85}{\celsius}$ e $D_{\text{out}, \max}=800$.
+\begin{table}[H]
+    \makebox[\linewidth][c]{
+        \begin{tabular}{|c|c|c|}
+            \hline
+            $D_\text{out}$ & $\theta\ /\SI{}{\celsius}$ & $\delta\theta\ /\SI{}{\celsius}$\\
+            \hline
+            920 & 26.54 & 6.95\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            920 & 26.54 & 6.95\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            920 & 26.54 & 6.95\\
+            \hline
+            920 & 26.54 & 6.95\\
+            \hline
+            920 & 26.54 & 6.95\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+            921 & 23.50 & 6.91\\
+            \hline
+      \end{tabular}
+    }
+    \caption{Misurazioni successive}
+\end{table}
+Il valore finale è stato calcolato come media su 20 misurazioni, da cui si è ricavato il valore $\overline{T}=(24.26\pm6.92)\SI{}{\celsius}$, con $D_{\text{out}, \max}=921$.
+La misurazione è stata confrontata con quella di un secondo termometro, di incertezza supponibile trascurabile rispetto a quella riscontrata nell'esperienza, il quale ha riportato
+una misura compatibile di $\SI{26.30}{\celsius}$. 
 \section{Conclusioni}
+L'esperienza ha portato a verificare come il PT100 assicuri una misura con incertezza minore rispetto al LM335 che abbiamo usato nella precedente esperienza;
+poi porcoddio non so più che cazzo scrivere, altrimenti avrei già risolto.
 \end{document}
