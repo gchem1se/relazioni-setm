@@ -47,28 +47,32 @@ Gabriele Camisa, Giuseppe Casale}
 \tableofcontents
 \pagebreak
 
-\section{TODO}
-%\begin{itemize}
-%\end{itemize}
 \section{Strumenti usati}
-%\begin{itemize}
-%\end{itemize}
+\begin{itemize}
+    \item Arduino Uno, utilizzato come ADC 
+    \begin{itemize}
+        \item risoluzione di 10 bit 
+        \item alimentazione tramite porta USB 2.0 ($V_{\text{CC}} = 5 \pm \SI{0.25}{\volt}$).
+    \end{itemize}
+    \item Sensore PT100 a film sottile, classe II (B) 
+    \begin{itemize}
+        \item resistenza variabile secondo $R_{\theta}=R_0\cdot\left(1+A\cdot\theta+B\cdot\theta^2\right)$
+        \item parametri caratteristici:
+        \begin{itemize}
+            \item $R_0=\SI{100}{\ohm}$
+            \item $A=3.9083\cdot10^{-3}\SI{}{\per\celsius}$
+            \item $B=-5.775\cdot10^{-7}\SI{}{\per\celsius}$
+        \end{itemize}
+    \end{itemize}
+    \item Multimetro HP 34401A
+\end{itemize}
 
 \section{Sintesi dell'esperienza}
 L'esperienza consiste nella misurazione della temperatura ambientale in laboratorio mediante la scheda a microcontrollore Arduino Uno e un sensore di temperatura PT100. Bisogna anche riportare la correlazione di tali misure all'incertezza attesa e a valori di riferimento osservati su un secondo termometro digitale più accurato.
 
 \section{Circuito di condizionamento}
 La scheda Arduino Uno implementa un convertitore analogico-digitale a 10 bit con cui è possibile convertire un voltaggio in input, in un range da \SI{0}{\volt} alla tensione di riferimento di \SI{5}{\volt}, in codici digitali da 0 a 1023. 
-Il sensore PT100 incorpora una resistenza dipendente dalla temperatura secondo: 
-\begin{equation*}
-    \begin{split}
-        &R_{\theta}=R_0\cdot\left(1+A\cdot\theta+B\cdot\theta^2\right)\\
-        &R_0=\SI{100}{\ohm}\\
-        &A=3.9083\cdot10^{-3}\SI{}{\per\celsius}\\
-        &B=-5.775\cdot10^{-7}\SI{}{\per\celsius}
-    \end{split}
-\end{equation*}
-per cui è possibile ottenere come output la tensione su una resistenza posta in serie al sensore stesso.
+Il sensore PT100 incorpora una resistenza dipendente dalla temperatura, per cui è possibile ottenere come output la tensione su una resistenza posta in serie al sensore stesso.
 
 Per ottimizzare la sensibilità $S_{V_F}^{\theta}=\frac{\partial{V_F}}{\partial{\theta}}$, rimanendo contemporaneamente in condizioni di autoriscaldamento accettabili, si è collegato il PT100 in una configurazione di partizione resistiva con un resistore di valore nominale $R_F=\SI{1}{\kilo\ohm}$ (successivamente rivalutato a $(976.00\pm10.76)\SI{}{\ohm}$ tramite il multimetro digitale). La tensione di output del circuito di condizionamento $V_F$ è stata prelevata ai capi di $R_F$.
 La serie è stata alimentata tramite USB 2.0 ad una tensione di $V_S=(5.00\pm0.25)\SI{}{\volt}$.
