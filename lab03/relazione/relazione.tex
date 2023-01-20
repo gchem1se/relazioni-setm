@@ -50,16 +50,20 @@ Gabriele Camisa, Giuseppe Casale}
 
 \section{Strumenti usati}
 \begin{itemize}
-    \item Arduino Uno:
-    Lo abbiamo utilizzato come ADC con 10 bit di risoluzione. L'Arduino da una tensione di alimentazione di 5V ed è collegato tramite porta USB 2.0 che ha $V_{\text{cc}} = 5 \pm \SI{0.25}{\volt}$.
-    \item Sensore LM335:
-    diodo Zener con tensione di breakdown proporzionale alla temperatura assoluta T(K)
+    \item Arduino Uno, utilizzato come ADC 
     \begin{itemize}
-        \item Campo di temperatura: (-40 : 100)°C
-        \item Uscita riferita allo zero assoluto: Vout=0K=-273,15 °C
-        \item Sensibilità nominale S=10mV/K
-        \item Incertezza strumentale a temperatura ambiente (modello deterministico): dT= +-2°C
-        \item Resistenza termica: 165 °C/W
+        \item risoluzione di 10 bit 
+        \item alimentazione tramite porta USB 2.0 ($V_{\text{CC}} = 5 \pm \SI{0.25}{\volt}$).
+        \item tensione di riferimento interna all'ADC $V_{\text{int}} = 1.1 \pm \SI{0.1}{\volt}$).
+    \end{itemize}
+    \item Sensore LM335, trasduttore di temperatura 
+    \begin{itemize}
+        \item $V_{\text{out}} = \SI{10}{\milli\volt} \cdot T$
+        \item campo di temperatura: $(-40\div100)\SI{}{\celsius}$
+        \item uscita riferita allo zero assoluto: $V_{\text{out}} = \SI{0}{\volt}\ @ \SI{-273,15}{\celsius}$
+        \item sensibilità nominale $S = \SI{10}{\milli\volt\per\kelvin}$
+        \item incertezza strumentale a temperatura ambiente (modello deterministico): $\delta T = \SI{2}{\celsius}$
+        \item resistenza termica: $\SI{165}{\celsius\per\watt}$
     \end{itemize}
     \item Multimetro HP 34401A
 \end{itemize}
