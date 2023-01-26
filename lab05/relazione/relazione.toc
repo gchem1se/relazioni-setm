@@ -4,6 +4,6 @@
 \contentsline {section}{\numberline {2}Sintesi dell'esperienza}{2}{}%
 \contentsline {section}{\numberline {3}Circuito di condizionamento}{2}{}%
 \contentsline {subsection}{\numberline {3.1}Valutazione dell'incertezza}{3}{}%
-\contentsline {subsection}{\numberline {3.2}Firmware}{3}{}%
-\contentsline {subsection}{\numberline {3.3}Dithering}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Firmware}{4}{}%
+\contentsline {subsection}{\numberline {3.3}Dithering}{5}{}%
 \contentsline {section}{\numberline {4}Conclusioni}{5}{}%
